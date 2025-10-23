@@ -1,3 +1,11 @@
-# Node modules (do not commit)
-/node_modules/
-/**/node_modules/
+# Root gitignore
+# Node modules
+node_modules/
+**/node_modules/
+
+# Service account / secrets
+backend/firebase/serviceAccountKey.json
+serviceAccountKey.json
+*.service-account.json
+.env
+.env.*
