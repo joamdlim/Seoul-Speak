@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    // User profiles
+    match /users/{userId} {
+      allow read: if isSignedIn() && isOwner(userId);
+      allow create: if isSignedIn() && isOwner(userId);
+      allow update: if isSignedIn() && isOwner(userId);
+      allow delete: if false; // Prevent user deletion through the app
+    }
+    
+    // Lessons
+    match /lessons/{lessonId} {
+      allow read: if isSignedIn(); // All authenticated users can read lessons
+      allow write: if false; // Only admin can modify lessons through the Firebase Console
+      
+      // Nested flashcards collection
+      match /flashcards/{flashcardId} {
+        allow read: if isSignedIn();
+        allow write: if false;
+      }
+    }
+    
+    // User progress (stored in user document)
+    match /users/{userId}/progress/{progressId} {
+      allow read: if isSignedIn() && isOwner(userId);
+      allow write: if isSignedIn() && isOwner(userId);
+    }
+  }
+}

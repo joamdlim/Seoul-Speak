@@ -1,0 +1,104 @@
+{
+  "lessons": [
+    {
+      "id": "lesson1",
+      "title": "Basic Korean Greetings",
+      "description": "Learn common Korean greetings and basic phrases for everyday conversations.",
+      "progress": 0,
+      "flashcards": [
+        {
+          "korean": "안녕하세요",
+          "english": "Hello (formal)",
+          "pronunciation": "annyeonghaseyo",
+          "example": "안녕하세요, 만나서 반갑습니다. (Hello, nice to meet you.)"
+        },
+        {
+          "korean": "안녕",
+          "english": "Hi/Hello (informal)",
+          "pronunciation": "annyeong",
+          "example": "안녕, 오랜만이야! (Hi, long time no see!)"
+        },
+        {
+          "korean": "감사합니다",
+          "english": "Thank you (formal)",
+          "pronunciation": "gamsahamnida",
+          "example": "도와주셔서 감사합니다. (Thank you for helping me.)"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "question": "What is the formal way to say 'Hello' in Korean?",
+            "options": [
+              "안녕하세요",
+              "안녕",
+              "감사합니다",
+              "잘 가요"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Which phrase means 'Thank you' in Korean?",
+            "options": [
+              "안녕",
+              "감사합니다",
+              "안녕하세요",
+              "잘 가요"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson2",
+      "title": "Numbers in Korean",
+      "description": "Learn how to count in Korean using both native Korean and Sino-Korean number systems.",
+      "progress": 0,
+      "flashcards": [
+        {
+          "korean": "하나",
+          "english": "One (Native Korean)",
+          "pronunciation": "hana",
+          "example": "사과 하나 주세요. (Please give me one apple.)"
+        },
+        {
+          "korean": "일",
+          "english": "One (Sino-Korean)",
+          "pronunciation": "il",
+          "example": "일학년 (First grade)"
+        },
+        {
+          "korean": "둘",
+          "english": "Two (Native Korean)",
+          "pronunciation": "dul",
+          "example": "사과 둘 주세요. (Please give me two apples.)"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "question": "What is the Native Korean number for 'one'?",
+            "options": [
+              "일",
+              "하나",
+              "둘",
+              "삼"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "Which number system is used for counting grades in school?",
+            "options": [
+              "Native Korean",
+              "Sino-Korean",
+              "Both systems",
+              "Neither system"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}
